@@ -1,0 +1,52 @@
+Sending build context to Docker daemon  29.32MB
+Step 1/7 : FROM node:10.16.0-jessie
+10.16.0-jessie: Pulling from library/node
+e7a7e6031030: Pull complete 
+e8063d4a3a14: Pull complete 
+270cb36e85ca: Pull complete 
+db6f9a7d8d9b: Pull complete 
+8ad77528dc53: Pull complete 
+40a4c790ca05: Pull complete 
+ed2ceaf8c68d: Pull complete 
+78d94d7c6536: Pull complete 
+Digest: sha256:d586ef4e7ab274c5fb241b1b010125e77e142cf6c603c813df789ff40d2782fb
+Status: Downloaded newer image for node:10.16.0-jessie
+ ---> 5c9623bde525
+Step 2/7 : WORKDIR /src
+ ---> Running in 3bfec6fbbdb7
+Removing intermediate container 3bfec6fbbdb7
+ ---> d81fb7992a90
+Step 3/7 : COPY package.json .
+ ---> 5cff29369285
+Step 4/7 : RUN npm install
+ ---> Running in 7c847204a021
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+npm WARN deprecated mkdirp@0.5.1: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+npm WARN deprecated json3@3.3.2: Please use the native JSON object instead of JSON 3
+npm WARN deprecated left-pad@1.3.0: use String.prototype.padStart()
+npm WARN deprecated request-promise-native@1.0.9: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN qe-todolist@0.1.0 No repository field.
+npm WARN qe-todolist@0.1.0 No license field.
+
+added 232 packages from 640 contributors and audited 232 packages in 11.36s
+found 20 vulnerabilities (9 low, 3 moderate, 7 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container 7c847204a021
+ ---> f9906fe6072e
+Step 5/7 : COPY . .
+ ---> 1a8003dda2ad
+Step 6/7 : EXPOSE 8080
+ ---> Running in 19eca5424794
+Removing intermediate container 19eca5424794
+ ---> cf9a3e667fde
+Step 7/7 : CMD ["npm", "start"]
+ ---> Running in 91177adc0157
+Removing intermediate container 91177adc0157
+ ---> ea949e50738d
+Successfully built ea949e50738d
+Successfully tagged qe-todolist:latest
