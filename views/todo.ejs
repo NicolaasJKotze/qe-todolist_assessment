@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>QE tdolist</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>QE todolist</h1>
+    <ul>
+      <% todolist.forEach(function(todo, index) { %>
+      <li>
+        <form class="edit-todo-form" action="/todo/edit/<%= index %>" method="post">
+          <a href="/todo/delete/<%= index %>">✘</a>
+          <span id="span-todo-<%= index %>"><%= todo %></span>
+          <input type="text" name="edittodo" id="edittodo-<%= index %>" placeholder="Update Value" />
+          <input type="submit" id="edit-submit-<%= index %>" value="Update" />
+        </form>
+      </li>
+      <% }); %>
+    </ul>
+
+    <form class="new-todo-form" action="/todo/add/" method="post">
+      <p>
+        <label for="newtodo">Create new todo item:</label>
+        <input type="text" name="newtodo" id="newtodo" autofocus />
+        <input type="submit" id="new-submit" />
+      </p>
+    </form>
+  </body>
+</html>
