@@ -50,6 +50,6 @@
 
 ## Assessment answers:
 1. <Add link to test plan Markdown/Gherkin file from task 1> [Test Plan](TESTPLAN.md)
-2. <Add link to bug report Markdown/Gherkin file(s) from task 2> [Bugs](bugs/bug_1_s1_Spelling-error-of-application-name-in-titlebar.md)
+2. <Add link to bug report Markdown/Gherkin file(s) from task 2> [A Simple Bug Report](bugs/bug_1_s1_Spelling-error-of-application-name-in-titlebar.md)
 3. <Add link to test plan Markdown/Gherkin file/section from task 3> [Tests](TESTS.md)
-4. <Add link to test plan Markdown/Gherkin file/section from task 4> [Optional](test/cases/tc_3_sl_req_mobi_Uninstall-application.md)
+4. <Add link to test plan Markdown/Gherkin file/section from task 4> [Optional Req8, Also see the Test Plane section 'What to test'](test/cases/tc_3_sl_req_mobi_Uninstall-application.md)
