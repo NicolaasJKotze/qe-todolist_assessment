@@ -1,0 +1,39 @@
+===== TEST SETUP =====
+URL= localhost:8080
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>QE tdolist</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>QE todolist</h1>
+    <ul>
+      
+    </ul>
+
+    <form class="new-todo-form" action="/todo/add/" method="post">
+      <p>
+        <label for="newtodo">Create new todo item:</label>
+        <input type="text" name="newtodo" id="newtodo" autofocus />
+        <input type="submit" id="new-submit" />
+      </p>
+    </form>
+  </body>
+</html>
+EXPECTED: QE tdolist
+ACTUAL  :     <title>QE tdolist</title>
+PASS
+-------------------------------------------------------------------------
+===== TEST EXECUTION =====
+EXPECTED: api testcase 1
+ACTUAL  :           <span id="span-todo-0">api testcase 1</span>
+PASS
+-------------------------------------------------------------------------
