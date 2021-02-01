@@ -10,7 +10,7 @@ This Test Plan coveres FRONTEND as well as BACKEND.
 The purpose of the Test Plan (TP) is to provide an overall test planning and test management document for multiple levels of test within this project.
 
 # OBJECTIVES
-. |                      | 
+. |.                     |.
 --|----------------------|---------------------------
 1. Prevent Defect        | Through active early testing activities.
 2. Verify Requirements   | To determine if we are building the product right.
@@ -48,7 +48,7 @@ ID | SEV | TITLE
 # APPROACH
 A staged approach applying combinations of test strategies.
 
-|Stage       | Summary                                                                               |
+|Stages       | Summary                                                                               |
 |------------| ------------------------------------------------------------------------------------- |
 |**Stage 1** | Adhoc and Exploratory-based to find the most obvious bugs and get them resolved fast. |
 |**Stage 2** | Formalise test cases using requirements-based testing.                                |
@@ -214,7 +214,7 @@ _Example Reports:_
 
 Use the following classification for the severity of bugs and basic risks.
 
-** S4 = Critical**
+**S4 = Critical**
 The bug affects critical functionality or critical data and there is no workaround (no way to avoid it). A critical issue affects a very large percentage of users (> 60%) and matches at least one of the following:
 
  * It can lead to data loss, introduce a security vulnerability or break the automatic end to end tests
@@ -228,7 +228,7 @@ Examples:
  * Difficulty to globally manage categories, products or customers
  * Difficulty to globally place and manage orders
 
-** S3 = Major**
+**S3 = Major**
 The bug affects major functionality or major data and there is a workaround, but it is not obvious or can be difficult to put in practice.
 
 A major issue affects a large percentage of users (> 30%) and matches at least one of the following:
@@ -243,7 +243,7 @@ Examples:
  * Difficulty in operating a module properly
  * Impacts the price the customer pays
 
-** S2 = Minor**
+**S2 = Minor**
 The bug affects minor functionality or non-critical data and there is a reasonable workaround, even if it can be annoying when using your shop.
 
 Examples:
@@ -255,7 +255,7 @@ Examples:
  * Inaccurate statistics
 
 
-** S1 = Trivial**
+**S1 = Trivial**
 The bug does not affect any functionality or data. It does not impact productivity or efficiency. It is only an inconvenience without functional impact and it does not even need a workaround.
 
 Examples:
@@ -269,43 +269,43 @@ Examples:
 
 Use the following classification for the priority of tasks and activities.
 
-** P4 = Urgent**
+**P4 = Urgent**
 Drop everything else and focus on this. Frequent status updates are required.
 
-** P3 = High**
+**P3 = High**
 If there are no urgent priorities, do these and resolve ASAP in the allocated time. Status updates as per project plan.
 
-** P2 = Medium**
+**P2 = Medium**
 If there are no urgent priorities, do these and resolve ASAP in the allocated time. Status updates as per project plan.
 
-** P1 = Low**
+**P1 = Low**
 If there are no urgent priorities, do these and resolve ASAP in the allocated time. Status updates as per project plan.
 
 ## TEST CASE STATUS
-** DRAFT**
+**DRAFT**
 
-** REVIEW**
+**REVIEW**
 
-** READY**
+**READY**
 
-** DEPRECATED**
+**DEPRECATED**
 
 ## TEST CASE RESULTS
-** TODO**
+**TODO**
 
-** IN PROGRESS**
+**IN PROGRESS**
 
-** PENDING**
+**PENDING**
 
-** BLOCKED**
+**BLOCKED**
 
-** FAIL**
+**FAIL**
 
-** PASS**
+**PASS**
 
-** ACCEPTABLE**
+**ACCEPTABLE**
 
-** QUESTIONABLE**
+**QUESTIONABLE**
 
 # REFERENCES
 * ISTQB Glossary
