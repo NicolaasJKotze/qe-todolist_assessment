@@ -8,11 +8,14 @@
 
 ### MANUAL TESTS
 
-ID | TITLE                                           | FEATURE         | LEVEL  | TYPE | STATUS | FILE                                            |
--- | ----------------------------------------------- | --------------  | ------ | ---- | ------ | ----------------------------------------------- |
-1  | Create, Read, Update, and Delete a single task. | Manage tasks    | System | e2e  | Ready  | tc_1_sl_e2e_CRUD a todo item (style table 1).md |
-1  | Create, Read, Update, and Delete a single task. | Manage tasks    | System | e2e  | Ready  | tc_1_sl_e2e_CRUD a todo item (style table 2).md |
-1  | Create, Read, Update, and Delete a single task. | Manage tasks    | System | e2e  | Ready  | tc_1_sl_e2e_CRUD a todo item (style Gherkin).md |
+
+ID | TITLE                                           | FEATURE            | LEVEL  | TYPE | STATUS | FILE                                            |
+-- | ----------------------------------------------- | ------------------ | ------ | ---- | ------ | ----------------------------------------------- |
+1  | Create, Read, Update, and Delete a single task. | Manage tasks       | System | e2e  | Ready  | tc_1_sl_e2e_CRUD a todo item (style table 1).md |
+1  | Create, Read, Update, and Delete a single task. | Manage tasks       | System | e2e  | Ready  | tc_1_sl_e2e_CRUD a todo item (style table 2).md |
+1  | Create, Read, Update, and Delete a single task. | Manage tasks       | System | e2e  | Ready  | tc_1_sl_e2e_CRUD a todo item (style Gherkin).md |
+2  | Create, Read, Update, and Delete a single task. | Manage tasks       | System | e2e  | Draft  | tc_2_sl_req_mobi_Create a todo item.md          |
+3  | Uninstall application from device.              | Manage Application | System | req  | Draft  | tc_3_sl_req_mobi_Uninstall application.md       |
 
 
 ### AUTOMATED API TESTS

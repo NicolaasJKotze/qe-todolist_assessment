@@ -30,7 +30,7 @@ ID | REQUIREMENT | STATUS
 6  | Should be able to delete todo items | Done
 7  | Should be able to edit todo items | Done
 8  | The application (frontend only) should be ported to Cordova and run as a mobile application. | IN PROGRESS
-9  | The application backend should run in Kubernetes on a 3 node cluster with multiple replicas of each pod. | IN PROGRESS
+9  | The application backend should run in Kubernetes on a 3 node cluster with multiple replicas of each pod. | TBD
 10 | Should be able to do rolling updates on the backend service without downtime | TBD
 11 | Application should be self healing after network issues, node outages, node restarts and other issues | TBD
 
@@ -46,8 +46,16 @@ ID | SEV | TITLE
 7  |  ?  | Loss of data due to instability, restriction, or crash thus lowering confidence in the value of the product.
 
 # APPROACH
+A staged approach applying combinations of test strategies.
+
+|Stage       | Summary                                                                               |
+|------------| ------------------------------------------------------------------------------------- |
+|**Stage 1** | Adhoc and Exploratory-based to find the most obvious bugs and get them resolved fast. |
+|**Stage 2** | Formalise test cases using requirements-based testing.                                |
+|**Stage 3** | Automate tests and bugs that can be automated based on regression-averse based testing|
 
 # TEST INTEGRATION WITH SDLC
+TBD
 
 # METRICS
 The following metrics are recommended for monitoring and control to support the objectives of testing:
@@ -77,7 +85,7 @@ The following reports or combinations of them are recommended to support the obj
 
 # WHAT TO TEST
 ## TEST DESIGNS
-See [TESTCASES.md](TESTCASES.md) for Test Cases related to the Test Designs.
+See [TESTS.md](TESTS.md) for Test Cases related to the Test Designs.
 
 ID | REQ.ID | RISK.ID | QUALITY     | TITLE 
 -- | ------ | ------- | ----------- | -------------
@@ -97,6 +105,8 @@ ID | REQ.ID | RISK.ID | QUALITY     | TITLE
 14 | 8      |  3,4    | feature     | Verify suitability of application.
 
 # TOOLS
+_Refer to the internal wiki for latest information and related instructions such as manuals._
+
 The tool selection primary motivation is to keep it as standard and low resource as possible. Typical rule of thumb, if it is struggle to run on a RaspberryPi Zero, keep searching. The reason behind this is to keep things simple and lower the risk cost of configuration maintenance such as libraries, training, onboarding, and dependencies.
 
 ## Node
@@ -112,16 +122,17 @@ Required to host the Node.js instance. The preferred choice for millions of deve
 ## cURL
 https://curl.se/
 
-BACKGROUND:
+**BACKGROUND:**
 
 curl is used in command lines or scripts to transfer data. It is also used in cars, television sets, routers, printers, audio equipment, mobile phones, tablets, settop boxes, media players and is the internet transfer backbone for thousands of software applications affecting billions of humans daily. curl is totally free, open and available. 
 Some operating systems ship curl by default. Some do not.
 
-
-PURPOSE:
+**PURPOSE:**
 
 API testing
 
+## Text Editor
+There is no standard so what ever feels comfortable. Common tools are Microsoft Visual Studio Code, VIM, Kate, Notepad++, etc.
 
 # CONFIGURATIONS
 To properly support testing, configuration management may involve ensuring the following:
@@ -148,27 +159,55 @@ throughout the test process.
 
 # HOW TO EXECUTE TASKS
 
+## MANUAL TESTS
+Manual tests can be found in the folder _"test/cases"_
+
+Filename follow a simple naming convention to improve searching and identification.
+
+tc_#_lvl_type_mobi_title.md
+
+
+| | |
+|-|-|
+|tc| test case |
+|#| unique identifier represented with a number |
+|lvl| test level sl=System al=Acceptance |
+|type| strategy related. e2e=End-2-End req=requirement |
+|mobi| when present represent that it's for mobile devices|
+|title| short descriptive title of the test |
+
+During execution complete the following areas of the test case:
+
+* DATE (At start)
+* RESULT (At end)
+* Notes (At end if relevant)
+* Execute : Actual (during execution)
+* Execute : Result (during execution)
+* Execute : Comment (bug id and other information that is relevant)
+
+
 ## API TEST
 API tests use a combination of bash and curl.
 
-LINUX
-
-Configuration:
+**LINUX**
 
 1. Check all comments mark with an * character in the "test-Suite_API.sh" file and modify accordingly.
 
 Steps:
 
 1. Navigate to the folder "test/api/".
-2. Run the bash script "_$bash test-Suite_API.sh | tee test-Run_REPORT.log_" 
+2. Run the bash script _"$bash {filename}.sh | tee reports/{filename}_REPORT.log"_ 
+3. Log files and run reports can be found in the folder _"test/api/reports"_
 
 NOTE: "tee" will print the tests to screen and to file.
 
-3. Test results are in the log files for archive purposes and presented on screen.
+_Example Output:_
 
-__Example Output:__
 ![Sample screenshot of a completed API test run](resources/images/APItest_sample.jpg)
 
+_Example Reports:_
+
+![Sample screenshot of report files generated as per step 2](resources/images/APItests_reports_sample.jpg)
 ---
 # CLASSIFICATIONS
 ## SEVERITY
@@ -268,15 +307,6 @@ If there are no urgent priorities, do these and resolve ASAP in the allocated ti
 
 ** QUESTIONABLE**
 
-
-----
-
-# TEMPLATE
-
-
-- Who is required
-- Resources required
-- How to execute tasks
-- Schedules
-- Budgets for activities
-- LoD and Structure of Docs
+# REFERENCES
+* ISTQB Glossary
+* IEEE29119-3 : Software test documentation
