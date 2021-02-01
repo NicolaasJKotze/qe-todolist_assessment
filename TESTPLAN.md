@@ -10,14 +10,14 @@ This Test Plan coveres FRONTEND as well as BACKEND.
 The purpose of the Test Plan (TP) is to provide an overall test planning and test management document for multiple levels of test within this project.
 
 # OBJECTIVES
-. |.                     |.
---|----------------------|---------------------------
-1. Prevent Defect        | Through active early testing activities.
-2. Verify Requirements   | To determine if we are building the product right.
-3. Validate Suitability  | To determine if we are building the right product for our users.
-4. Build Confidence      | Through active monitoring activities throughout the SDLC.
-5. Reduce Risk(s)        | Through active quality processes, testing, and control activities throughout the SDLC.
-6. Provide Information   | Through active monitoring to enable information risk-based decisions.
+| | |
+|-|-|
+1. Prevent Defect        | Through active early testing activities.                                                 |
+2. Verify Requirements   | To determine if we are building the product right.                                       |
+3. Validate Suitability  | To determine if we are building the right product for our users.                         |
+4. Build Confidence      | Through active monitoring activities throughout the SDLC.                                |
+5. Reduce Risk(s)        | Through active quality processes, testing, and control activities throughout the SDLC.   |
+6. Provide Information   | Through active monitoring to enable information risk-based decisions.                    |
 
 # SCOPE
 ID | REQUIREMENT | STATUS
